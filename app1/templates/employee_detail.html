@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row mt-3 shadow p-5" style="background-color:#d6d9d9">
+    <h3 class='text-center'> {{ employee.name }} </h3>
+    <div class="col-sm-5 offset-sm-1">
+        <p> <strong>Name:</strong>{{ employee.name }}</p>
+        <p> <strong>Email:</strong>{{ employee.email }}</p>
+        <p> <strong>Mobile:</strong>{{ employee.mobile }}</p>
+        <p> <strong>Date of Field:</strong>{{ employee.date_of_field }}</p>
+        <p> <strong>Gender:</strong>{{ employee.gender }}</p>
+        <p> <strong>Skills:</strong>{{ employee.skills}}</p>
+        <p> <strong>Province:</strong>{{ employee.state }}</p>
+        <p> <strong>City:</strong>{{ employee.city}}</p>
+        
+        <p> <strong>Employee Resume:</strong> {% if employee.resume %}
+        <a href="{{ employee.resume.url }}">Download Resume</a>
+        {% else %}
+        <p>No resume uploaded.</p>
+        {% endif %}
+        <p> <strong>Employee Video:</strong> {% if employee.video %}
+        <a href="employee.video.url">Download Video</a>
+        {% else %}
+        <p>No video uploaded.</p>
+        {% endif %}       
+    
+    </div>
+
+    <div class="col-sm-4">
+        <div class="row">
+            <div class="image-container float-end">
+            {% if employee.profile_picture %}
+            <img src="{{ employee.profile_picture.url }}" alt="profile picuture" class="img-fluid rounded">
+            {% endif %}
+        </div>
+        </div>
+        <div class="row">
+            <div class="video-container" style="max-width: 200px; height:auto;">
+            {% if employee.video %}
+                <video controls class="embed-responsive-item mt-3" style='width: 100%; height: auto;'
+                 src="{{ employee.video.url }}" type="video/mp4"></video>
+            {% endif %}
+        </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="text-center mt-4">
+        <button class="btn btn-warning ">Edit</button>
+        <button class="btn btn-danger ">Delete</button>
+        <button class="btn btn-primary ">Back</button>
+
+    </div>
+
+
+</div>
+
+
+{% endblock content %}
+

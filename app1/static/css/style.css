@@ -1,0 +1,18 @@
+
+.navbar-brand {
+    font-weight: bolder;
+    padding-right: 100px;
+}
+.navbar-nav .nav-link{
+    font-size: 15px;
+}
+
+.navbar-nav .nav-link:hover{
+    color: chartreuse;
+    text-decoration: none;
+}
+
+.employee_list{
+    background-color: darkgray;
+    padding: 20px;
+}

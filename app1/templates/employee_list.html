@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row m-4">
+    <div class="employee_list mt-2">
+    {% for employee in employees %}
+       <a href="{% url "employee_detail" employee.id %}"> {{ employee.name }} </a>
+        {% comment %} {{ employee.email }}
+        {{ employee.mobile }}
+        {{ employee.date_of_field }}
+        {{ employee.gender }}
+        {{ employee.skills}}
+        {{ employee.state }}
+        {{ employee.city}}
+        {{ employee.profile_picture }}
+        {{ employee.resume}}
+        {{ employee.video }} {% endcomment %}
+    </div>
+
+
+
+
+
+
+
+
+    {% endfor %}
+</div>
+{% endblock content %}
+
