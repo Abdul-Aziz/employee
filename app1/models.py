@@ -21,7 +21,7 @@ class Employee(models.Model):
     name = models.CharField(max_length=255)
     email = models.EmailField()
     mobile = models.PositiveIntegerField()
-    date_of_field = models.DateField(auto_now_add=False,auto_now=False,null=True)
+    date_of_birth = models.DateField(auto_now_add=False,auto_now=False,null=True)
     gender = models.CharField(max_length=25,choices=GENDER_CHOICES, default='others')
     skills = models.CharField(max_length=100,null=True,blank=True)
     state = models.CharField(max_length=200,choices=PROVINCE_CHOICES,default='Select Province')

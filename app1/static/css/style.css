@@ -15,4 +15,10 @@
 .employee_list{
     background-color: darkgray;
     padding: 20px;
+    display: block;
+}
+.errorstyle{
+    color: red;
+    font-weight: bold;
+    text-align: center;
 }
